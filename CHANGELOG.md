@@ -8,6 +8,9 @@ How to write the changelog.
 https://keepachangelog.com/ja/1.0.0/
 --->
 
+## [v1.0.4] - 2025-02-01
+### Changed
+- fix UWP build error
 
 ## [v1.0.3] - 2025-02-01
 ### Changed

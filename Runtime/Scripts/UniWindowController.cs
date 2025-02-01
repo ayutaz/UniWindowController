@@ -21,6 +21,7 @@ using UnityEngine.InputSystem;
 
 namespace Kirurobo
 {
+#if !UNITY_WSA
     /// @cond DOXYGEN_SHOW_INTERNAL_CLASSES
 
     /// <summary>
@@ -37,12 +38,13 @@ namespace Kirurobo
 
     /// @endcond
 
-
+#endif
     /// <summary>
     /// Unified window controller for Windows / Mac
     /// </summary>
     public class UniWindowController : MonoBehaviour
     {
+#if !UNITY_WSA
         /// <summary>
         /// The same as UniWinCore.TransparentType
         /// </summary>
@@ -81,7 +83,7 @@ namespace Kirurobo
             WallpaperModeEnabled = 64 + 1 + 8,
             WallpaperModeDisabled = 64 + 1,
         };
-
+        
         /// <summary>
         /// Get the current instance of UniWindowController
         /// </summary>
@@ -1100,5 +1102,7 @@ namespace Kirurobo
             }
             return 0;
         }
+        
+#endif
     }
 }
