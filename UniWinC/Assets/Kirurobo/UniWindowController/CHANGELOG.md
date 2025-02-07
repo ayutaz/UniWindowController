@@ -8,6 +8,10 @@ How to write the changelog.
 https://keepachangelog.com/ja/1.0.0/
 --->
 
+## [v1.0.5] - 2025-02-07
+### Changed
+- add force stop hit test parameter
+
 ## [v1.0.4] - 2025-02-01
 ### Changed
 - fix UWP build error
