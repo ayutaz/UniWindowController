@@ -96,6 +96,11 @@ namespace Kirurobo
         private UniWinCore _uniWinCore = null;
 
         /// <summary>
+        /// ヒット処理を強制終了
+        /// </summary>
+        public bool IsForceHitTestStop { get; set; } = false;
+
+        /// <summary>
         /// Is this window receives mouse events
         /// </summary>
         public bool isClickThrough
@@ -608,7 +613,7 @@ namespace Kirurobo
         /// <returns></returns>
         private IEnumerator HitTestCoroutine()
         {
-            while (Application.isPlaying)
+            while (!IsForceHitTestStop && Application.isPlaying)
             {
                 yield return new WaitForEndOfFrame();
 
